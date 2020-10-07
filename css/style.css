@@ -1,0 +1,125 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+@font-face {
+  font-family: "aqum";
+  src: url("/aqum/Aqum.ttf");
+}
+nav ul a,
+nav .brand-logo {
+  color: #e5dada;
+}
+nav .brand-logo {
+  font-family: "aqum";
+  font-size: 20px;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #e5dada;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: #111;
+  font-family: "aqum";
+   mix-blend-mode: difference;
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+h2.header{
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 2.3733333333rem 0 1.424rem 0;
+  text-shadow: 2px 2px 2px #000;
+}
+h5.header{
+  text-shadow: 2px 2px 2px #000;
+}
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+.parallax img { 
+  object-fit: contain;
+  background-size: cover;
+}
+#loginclass {
+  display: block;
+}
+#signupclass {
+  display: none;
+}
+.nav-wrapper {
+  background-color: #363537;
+}
+#s2 {
+  color: #e5dada;
+}
+.logged-in,
+.logged-out {
+  display: none;
+}
+.fmblock {
+  background-color: #fdfffc;
+  padding: 12px;
+  display: none;
+}
+.bodyofcontent {
+  background-image: url("/back6.png");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.main {
+  background-color: #363537;
+  color: #e5dada;
+  padding: 12px;
+  display: none;
+  margin-top: 5%;
+  border: 1px #e5dada solid;
+  border-radius: 20px;
+}
+.btn-custom {
+  margin-left: 10px;
+}
+#login-email,
+#login-password,
+#signup-email,
+#signup-password,
+input {
+  color: #e5dada;
+}

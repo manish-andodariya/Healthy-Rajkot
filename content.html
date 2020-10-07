@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Health</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body class="bodyofcontent">
+  <nav class="transparent" role="navigation">
+    <div class="nav-wrapper darken-1">
+      <a id="logo-container" href="#" class="brand-logo">My Health</a>
+      <ul class="right hide-on-med-and-down">
+        <li class="logged-in">
+          <a href="/index.html" class="white-text text-darken-1">Home</a>
+        </li>
+        <li class="logged-out">
+          <a href="#s2" class="white-text text-darken-1 modal-trigger" data-target="modal-login">LogIn</a>
+        </li>
+        <li class="logged-out">
+          <a href="#s2" class="white-text text-darken-1 modal-trigger" data-target="modal-signin">SignIn</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myacc()">My Account</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myrec()">My Record</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myfrec()">My Family Record</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myexp()">Expert Record</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="about()">About</a>
+        </li>
+
+        <li class="logged-in">
+          <a href="#" onclick="logout()" class="white-text text-darken-1">LogOut</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li class="logged-in">
+          <a href="/index.html" class="white-text text-darken-1">Home</a>
+        </li>
+        <li class="logged-out">
+          <a href="#s2" class="white-text text-darken-1 modal-trigger" data-target="modal-login">LogIn</a>
+        </li>
+        <li class="logged-out">
+          <a href="#s2" class="white-text text-darken-1 modal-trigger" data-target="modal-signin">SignIn</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myacc()">My Account</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myrec()">My Record</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myfrec()">My Family Record</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="myexp()">Expert Record</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text text-darken-1" onclick="about()">About</a>
+        </li>
+
+        <li class="logged-in">
+          <a href="#" onclick="logout()" class="white-text text-darken-1">LogOut</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div class="container main"></div>
+  <div class="container center row fmblock">
+    <h4 class="center">Enter Family Members</h4>
+    <br />
+    <a href="#modalcreatefm" class="center waves-effect waves-light btn z-depth-3-small darken-2 modal-trigger">Create
+      Family
+      Mambers</a>
+    <ul class="collapsible">
+
+    </ul>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalcreaterecod" class="modal">
+    <div class="modal-content">
+      <h5 class="white-text center">Create New Record</h5>
+      <div class="row">
+        <form class="col s12" id="createrec">
+          <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate" required />
+            <label for="first_name">Name Of Patient</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="age" type="number" maxlength="3" class="validate" min="1" max="110" required />
+            <label for="age">Age</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="disease" type="text" class="validate" maxlength="30" required />
+            <label for="disease">Disease</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="description" type="text" class="validate" maxlength="150" />
+            <label for="description">Description</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="doctor" type="text" class="validate" maxlength="20" required />
+            <label for="doctor">Doctor</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="fee" type="number" class="validate" maxlength="6" />
+            <label for="fee">Fees Paid</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="clinic" type="text" class="validate" maxlength="20" required />
+            <label for="clinic">Clinic/Hospital Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="city" type="text" class="validate" maxlength="20" required />
+            <label for="city">City of Clinic/Hospital</label>
+          </div>
+          <p class="update_done"></p>
+          <p class="update_error"></p>
+          <button class="waves-effect waves-light btn z-depth-3 darken-2">Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalcreateexprecod" class="modal">
+    <div class="modal-content">
+      <h5 class="white-text center">Add New Expert</h5>
+      <div class="row">
+        <form class="col s12" id="createexprec">
+          <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate" required />
+            <label for="first_name">Name Of Doctor</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="speciality" type="Text" maxlength="30" class="validate" required />
+            <label for="speciality">Speciality</label>
+          </div>
+          <div class=" input-field col s12">
+            <input id="disease" type="text" class="validate" maxlength="30" required />
+            <label for="disease">Disease</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="description" type="text" class="validate" maxlength="150" />
+            <label for="description">Description</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="fee" type="number" class="validate" maxlength="6" />
+            <label for="fee">Fees Paid</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="clinic" type="text" class="validate" maxlength="20" required />
+            <label for="clinic">Clinic/Hospital Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="city" type="text" class="validate" maxlength="20" required />
+            <label for="city">City of Clinic/Hospital</label>
+          </div>
+          <p class="update_done"></p>
+          <p class="update_error"></p>
+          <button class="waves-effect waves-light btn z-depth-3 darken-2">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Structure -->
+  <div id="modalfmrecord" class="modal">
+    <div class="modal-content">
+      <h5 class="white-textcenter">Create New Record</h5>
+      <div class="row">
+        <form class="col s12" id="createfmrec">
+          <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate" required />
+            <label for="first_name">Name Of Patient</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="age" type="number" maxlength="3" class="validate" min="1" max="110" required />
+            <label for="age">Age</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="disease" type="text" class="validate" maxlength="30" required />
+            <label for="disease">Disease</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="description" type="text" class="validate" maxlength="150" />
+            <label for="description">Description</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="doctor" type="text" class="validate" maxlength="20" required />
+            <label for="doctor">Doctor</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="fee" type="number" class="validate" maxlength="6" />
+            <label for="fee">Fees Paid</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="clinic" type="text" class="validate" maxlength="20" required />
+            <label for="clinic">Clinic/Hospital Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="city" type="text" class="validate" maxlength="20" required />
+            <label for="city">City of Clinic/Hospital</label>
+          </div>
+          <p class="update_done"></p>
+          <p class="update_error"></p>
+          <button class="waves-effect waves-light btn z-depth-3 darken-2">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalupdaterecod" class="modal">
+    <div class="modal-content">
+      <h5 class="white-text center">Update Record</h5>
+      <div class="row">
+        <form class="col s12" id="updaterec">
+          <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate" required />
+            <label for="first_name">Name Of Patient</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="age" type="number" maxlength="3" class="validate" min="1" max="110" required />
+            <label for="age">Age</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="disease" type="text" class="validate" maxlength="30" required />
+            <label for="disease">Disease</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="description" type="text" class="validate" maxlength="150" />
+            <label for="description">Description</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="doctor" type="text" class="validate" maxlength="20" required />
+            <label for="doctor">Doctor</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="fee" type="number" class="validate" maxlength="6" />
+            <label for="fee">Fees Paid</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="clinic" type="text" class="validate" maxlength="20" required />
+            <label for="clinic">Clinic/Hospital Name</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="city" type="text" class="validate" maxlength="20" required />
+            <label for="city">City of Clinic/Hospital</label>
+          </div>
+          <p class="update_done"></p>
+          <p class="update_error"></p>
+          <button class="waves-effect waves-light btn z-depth-3 darken-2">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modalcreatefm" class="modal">
+    <div class="modal-content">
+      <h5 class="white-text center">Create New Family Member</h5>
+      <div class="row">
+        <form class="col s12" id="createfm">
+          <div class="input-field col s12">
+            <input id="first_name" type="text" class="validate" required />
+            <label for="first_name">Name Of Member</label>
+          </div>
+          <p class="update_done"></p>
+          <p class="update_error"></p>
+          <button class="waves-effect waves-light btn z-depth-3 darken-2">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--  Scripts-->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".modal").modal();
+      $(".collapsible").collapsible();
+    });
+  </script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCaRHJmcHu1r-OCbPAFImqVhfHrYAKETTw",
+      authDomain: "healthyrajkot.firebaseapp.com",
+      databaseURL: "https://healthyrajkot.firebaseio.com",
+      projectId: "healthyrajkot",
+      storageBucket: "healthyrajkot.appspot.com",
+      messagingSenderId: "634290503163",
+      appId: "1:634290503163:web:3acb7295b4ce3500d8df5e",
+    };
+    // Initialize Firebase
+    const Firebase = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const firestore = firebase.firestore();
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

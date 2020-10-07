@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Health</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body class="black">
+  <nav class="transparent" role="navigation">
+    <div class="nav-wrapper darken-1">
+      <a id="logo-container" href="#" class="brand-logo">My Health</a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="#" class="white-text btn z-depth-3 waves-effect waves-light" onclick="gotoconsole()">Go To
+            Console</a>
+        </li>
+        <li class="logged-out">
+          <a href="#s2" class="white-text text-darken-1 modal-trigger" data-target="modal-login">LogIn</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li>
+          <a href="#" class="white-text btn z-depth-3 waves-effect waves-light" onclick="gotoconsole()">Go To
+            Console</a>
+        </li>
+        <li class="logged-out">
+          <a href="#s2" class="white-text text-darken-1 modal-trigger" data-target="modal-login">LogIn</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h2 class="header center text-lighten-2">My Healthy Rajkot</h2>
+        <div class="row center">
+          <h5 class="header col s12 light">Record Everything</h5>
+        </div>
+        <div class="row center">
+          <a href="#" id="download-button" class="btn z-depth-3-large waves-effect waves-light teal lighten-1"
+            onclick="gotoconsole()">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="back5.png" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section" id="s1">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center white-text"><i class="material-icons">sentiment_satisfied_alt</i></h2>
+            <h5 class="center white-text">Your Health</h5>
+
+            <p class="light white-text">Record everything about your health, Record your Consults,Reports and much more
+              👍 </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center white-text"><i class="material-icons">family_restroom</i></h2>
+            <h5 class="center white-text">yourour Family's Health</h5>
+
+            <p class="light white-text">Record health cards of your family members, their consults,reports and much more
+              👍 </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center white-text"><i class="material-icons">receipt_long</i></h2>
+            <h5 class="center white-text">Easy to Record with</h5>
+
+            <p class="light white-text">We have provided a perfect and simple user interaction and features to record
+              everything
+              about your health at your availibilty 👌 </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light loginchange">LogIn to access or make new Records 📱</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="back6.png" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container" id="s2">
+    <div class="section">
+
+      <div class="center row onlogin">
+        <div class="col s12 center" id="loginclass">
+          <h2 class="center white-text">LogIn</h2>
+          <p class="left-align light">
+          <form id="login-form">
+            <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="signup-email">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="signup-password">Password</label>
+            </div>
+            <p id="login-error" class="center"></p>
+            <button class=" left waves-effect waves-light btn z-depth-3 darken-2">Log in</button>
+            <a href="#s2" class="left grey-text" id="signuplink" style="padding-top: 15px; padding-left: 5px;">Don't
+              have an account?</a>
+          </form>
+          </p>
+        </div>
+        <div class="col s12 center" id="signupclass">
+          <h2 class="center white-text">SignUp</h2>
+          <p class="left-align light">
+          <form id="signup-form">
+            <div class="input-field">
+              <input type="email" id="signup-email" required />
+              <label for="signup-email ">Email address</label>
+            </div>
+            <div class="input-field">
+              <input type="password" id="signup-password" required />
+              <label for="signup-password">Choose Password</label>
+            </div>
+            <p id="signup-error"></p>
+            <button class="left waves-effect waves-light btn z-depth-3 darken-2">Sign Up</button>
+            <a href="#s2" class="left grey-text" id="loginlink" style="padding-top: 15px; padding-left: 5px;">Already
+              have an account?</a>
+          </form>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">More Features comming soon 👍 </h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="back4.png" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Make Records of your doctors and experts also.</h5>
+          <p class="grey-text text-lighten-4">With this website you cla make your and your family maembers records
+            regarding mediacls,hospitals,doctors and also medicins and many more.</p>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center">
+        Made by <a class="white-text black-lighten-3" href="#">Manish Prajapti</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      // Your Firebase Configurations
+    };
+    // Initialize Firebase
+    const Firebase = firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const firestore = firebase.firestore();
+  </script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>
